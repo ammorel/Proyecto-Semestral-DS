@@ -12,84 +12,39 @@
 
     <body>
         <header>
-          <nav class="navbar navbar-expand-md">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img src="imgs/TGL.jpg" height="75" class="d-inline-block align-top" alt="">
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="border-color: #FFFFFF">
-                <span class="navbar-toggler-icon" style="color: #FFFFFF;"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" style="font-family: Helvetica; color: #FFFFFF">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://www.instagram.com/theglasslab.cl/" target="_blank" style="font-family: Helvetica; color: #FFFFFF">Instagram</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: Helvetica; color: #FFFFFF">
-                      Productos
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Pulseras</a></li>
-                      <li><a class="dropdown-item" href="#">Anillos</a></li>
+            <nav class="navbar navbar-expand-lg" style="background-color: #000000;">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="imgs/TGL.jpg" height="30" class="d-inline-block align-top" alt="">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown" style="display: flex; justify-content: space-around;">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" style="font-family: Helvetica; color: #FFFFFF">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/theglasslab.cl/"  target="_blank" style="font-family: Helvetica; color: #FFFFFF">Instagram</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-family: Helvetica; color: #FFFFFF">A Pedido</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: Helvetica; color: #FFFFFF">
+                          Productos
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="#">Pulseras</a></li>
+                          <li><a class="dropdown-item" href="#">Anillos</a></li>
+                        </ul>
+                      </li>
                     </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+                  </div>
+                </div>
+              </nav>
         </header>
-
-        <main>
-          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="imgs/banner1.jpg" width="100%" height="100%">
-                
-                <div class="container">
-                  <div class="carousel-caption text-end" style="color:aliceblue">
-                    <h3>Texto 1.</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="imgs/banner2.jpg" width="100%" height="100%">
-        
-                <div class="container">
-                  <div class="carousel-caption text-start" style="color:aliceblue">
-                    <h3>Texto 2.</h3>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="imgs/banner3.jpg" width="100%" height="100%">
-        
-                <div class="container">
-                  <div class="carousel-caption " style="color:aliceblue">
-                    <h3>Texto 3.</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-
-        </main>        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     </body>
 </html>
