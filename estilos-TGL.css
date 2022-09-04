@@ -2,9 +2,26 @@
     background-color: #000000;
 }
 
-.marketing .col-lg-4 {
+.marketing .col-md-4 {
   margin-top: 1.5rem;
   text-align: center;
+}
+
+.navbar-brand img{
+  height: 75px;
+}
+
+.navbar-brand{
+  padding-left: 1em;
+}
+
+.navbar-nav{
+  align-items: center;
+}
+
+.navbar-nav li{
+  padding-left:3px;
+  padding-right:3px;
 }
 /*
 COLORES: 
