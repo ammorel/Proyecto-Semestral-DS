@@ -13,25 +13,29 @@
         <header>
           <nav class="navbar navbar-expand-md navbar-dark">
             <div class="container-fluid">
-              <a class="navbar-brand mx-auto" href="#">
-                <img src="imgs/TGL.jpg" height="75" class="d-inline-block align-top" alt="">
-              </a>
+              <a class="navbar-brand d-md-none" href="#"><img src="imgs/TGL.jpg" alt=""></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarCollapse" style="position: absolute;">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mb-2 mb-md-0 mx-auto">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#" style="font-family: Helvetica">Inicio</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" href="https://www.instagram.com/theglasslab.cl/" target="_blank" style="font-family: Helvetica">Instagram</a>
                   </li>
+                  <a class="navbar-brand d-none d-md-block" href="#">
+                    <img src="imgs/TGL.jpg" alt="">
+                  </a>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" style="font-family: Helvetica">A Pedido</a>
+                  </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: Helvetica">
                       Productos
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
+                    <ul class="dropdown-menu dropdown-menu-dark" style="background-color: #000000;">
                       <li><a class="dropdown-item" href="#">Pulseras</a></li>
                       <li><a class="dropdown-item" href="#">Anillos</a></li>
                     </ul>
@@ -87,9 +91,7 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-
-          <div class="container marketing" style="padding-top: 2.5%;">
-
+          <div class="container marketing">
             <!-- Three columns of text below the carousel -->
             <div class="row">
               <div class="col-lg-4">
