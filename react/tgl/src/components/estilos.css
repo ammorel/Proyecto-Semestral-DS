@@ -1,0 +1,17 @@
+.dropdown-menu{
+    background-color: black;
+}
+
+.navbar-nav{
+    align-items: center;
+}
+
+.navbar-brand{
+    padding-left: .9em;
+}
+
+.nav-link{
+    font-family: Helvetica;
+    margin-right: 3px;
+    margin-left: 3px;
+}
