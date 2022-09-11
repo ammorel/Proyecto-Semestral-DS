@@ -20,17 +20,17 @@
     font-family: Helvetica;
 }
 
-.col{
+.col-md{
     margin-top: 1.5rem;
     text-align: center;
     font-family: Helvetica;
     color: #FFFFFF;
 }
 
-.col img{
+.col-md img{
     border-radius: 50%;
 }
 
-.col h2{
+.col-md h2{
     margin-top: 1.5rem;
 }

@@ -9,8 +9,9 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
       <div className="App">
+        <NavBarTGL />
           <Routes>
-            <Route path='/' element={<><NavBarTGL /><CarouselTGL /><ColRows /></>} />
+            <Route path='/' element={<><CarouselTGL /><ColRows /></>} />
             <Route path='/cart' />
           </Routes>
       </div>

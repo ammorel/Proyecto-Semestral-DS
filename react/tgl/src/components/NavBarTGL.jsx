@@ -19,7 +19,7 @@ function NavBarTGL() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="m-auto">
+          <Nav className="mx-auto">
             <Nav.Link to="/" as={NavLink}>Inicio</Nav.Link>
             <Nav.Link href="https://www.instagram.com/theglasslab.cl/" target="_blank" active >Instagram</Nav.Link>
             <Navbar.Brand className="d-none d-md-block" href="#home">
