@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './estilos.css';
+import { NavLink } from "react-router-dom"
 
 function NavBarTGL() {
   return (
@@ -19,7 +20,7 @@ function NavBarTGL() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <Nav.Link href="#home" active>Inicio</Nav.Link>
+            <Nav.Link to="/" as={NavLink}>Inicio</Nav.Link>
             <Nav.Link href="https://www.instagram.com/theglasslab.cl/" target="_blank" active >Instagram</Nav.Link>
             <Navbar.Brand className="d-none d-md-block" href="#home">
               <img
