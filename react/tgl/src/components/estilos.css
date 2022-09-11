@@ -15,3 +15,22 @@
     margin-right: 3px;
     margin-left: 3px;
 }
+
+.carousel-caption{
+    font-family: Helvetica;
+}
+
+.col{
+    margin-top: 1.5rem;
+    text-align: center;
+    font-family: Helvetica;
+    color: #FFFFFF;
+}
+
+.col img{
+    border-radius: 50%;
+}
+
+.col h2{
+    margin-top: 1.5rem;
+}
