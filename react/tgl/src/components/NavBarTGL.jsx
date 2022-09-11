@@ -2,14 +2,14 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import './estilos.css';
 import { NavLink } from "react-router-dom"
+import "./estilos.css"
 
 function NavBarTGL() {
   return (
     <Navbar bg="black" variant="dark" expand="md">
       <Container>
-        <Navbar.Brand className="d-md-none" href="#home">
+        <Navbar.Brand className="d-md-none" to="/" as={NavLink}>
           <img
             src={require("../imgs/TGL.jpg")}
             height="75"
@@ -22,7 +22,7 @@ function NavBarTGL() {
           <Nav className="m-auto">
             <Nav.Link to="/" as={NavLink}>Inicio</Nav.Link>
             <Nav.Link href="https://www.instagram.com/theglasslab.cl/" target="_blank" active >Instagram</Nav.Link>
-            <Navbar.Brand className="d-none d-md-block" href="#home">
+            <Navbar.Brand className="d-none d-md-block" to="/" as={NavLink}>
               <img
                 src={require("../imgs/TGL.jpg")}
                 height="75"
@@ -39,6 +39,11 @@ function NavBarTGL() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          <NavLink to="/cart" as={NavLink}>
+                <span class="material-symbols-outlined">
+                  shopping_cart
+                </span>
+          </NavLink>
         </Navbar.Collapse>
       </Container>
     </Navbar>
