@@ -4,9 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBarTGL from './components/NavBarTGL';
 import CarouselTGL from './components/CarouselTGL';
 import ColRows from './components/ColumnsRows';
-import{ Route,
-  Routes } from "react-router-dom";
-
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -19,4 +17,5 @@ function App() {
       </div>
   );
 }
+
 export default App;
