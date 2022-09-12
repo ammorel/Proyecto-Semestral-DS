@@ -21,6 +21,15 @@ function NavBarTGL() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
             <Nav.Link to="/" as={NavLink}>Inicio</Nav.Link>
+            <NavDropdown title="Nosotros" id="basic-nav-dropdown" menuVariant="dark" active>
+              <NavDropdown.Item href="#action/3.1">
+                Información
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Contacto
+              </NavDropdown.Item>
+            </NavDropdown> 
             <Nav.Link href="https://www.instagram.com/theglasslab.cl/" target="_blank" active >Instagram</Nav.Link>
             <Navbar.Brand className="d-none d-md-block" to="/" as={NavLink}>
               <img
@@ -32,18 +41,20 @@ function NavBarTGL() {
             </Navbar.Brand>
             <Nav.Link href="#home" active>A Pedido</Nav.Link>
             <NavDropdown title="Productos" id="basic-nav-dropdown" menuVariant="dark" active>
-              <NavDropdown.Item href="#action/3.1">Pulseras</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item href="#action/3.1">
                 Anillos
               </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Pulseras
+              </NavDropdown.Item>
             </NavDropdown>
-          </Nav>
-          <NavLink to="/cart" as={NavLink}>
+            <NavLink to="/cart" as={NavLink}>
                 <span class="material-symbols-outlined">
                   shopping_cart
                 </span>
-          </NavLink>
+            </NavLink>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
