@@ -6,21 +6,21 @@ import './estilos.css';
 function ColRows() {
   return (
     <Container>
-      <Row className="justify-content-center">
-        <Col md-4>
+      <Row className="justify-content-md-center">
+        <Col md>
           <img src={require("../imgs/lootring1.1.jpg")} height="140" alt=""/>
           <h2>LOOT RING</h2>
           <p>Anillos duotono. Disponibles en 3 versiones.</p>
         </Col>
-        <Col md-4>
+        <Col md>
           <img src={require("../imgs/wristchain1.1.jpg")} height="140" alt=""/>
           <h2>WRIST CHAIN</h2>
           <p>Cadenas para las muñecas con eslabones de 20mm. Disponible en 3 versiones.</p>
         </Col>
-        <Col md-4>
+        <Col md>
           <img src={require("../imgs/collar1.jpg")} height="140" alt=""/>
-          <h2>A Pedido</h2>
-          <p></p>
+          <h2>A PEDIDO</h2>
+          <p>Danos tu idea de anillo, pulsera u otro accesesorio y lo hacemos.</p>
         </Col>
       </Row>
     </Container>
