@@ -9,7 +9,7 @@ function NavBarTGL() {
   return (
     <Navbar bg="black" variant="dark" expand="md">
       <Container>
-        <Navbar.Brand className="d-md-none" href="#home">
+        <Navbar.Brand className="d-md-none" to="/" as={NavLink}>
           <img
             src={require("../imgs/TGL.jpg")}
             height="75"
@@ -19,10 +19,19 @@ function NavBarTGL() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto">
+          <Nav className="m-auto">
             <Nav.Link to="/" as={NavLink}>Inicio</Nav.Link>
-            <Nav.Link href="https://www.instagram.com/theglasslab.cl/" target="_blank" active >Instagram</Nav.Link>
-            <Navbar.Brand className="d-none d-md-block" href="#home">
+            <NavDropdown title="Nosotros" id="basic-nav-dropdown" menuVariant="dark">
+              <NavDropdown.Item to="/informacion" as={NavLink}>
+                Información
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item to="/contacto" as={NavLink}>
+                Contacto
+              </NavDropdown.Item>
+            </NavDropdown> 
+            <Nav.Link href="https://www.instagram.com/theglasslab.cl/" target="_blank">Instagram</Nav.Link>
+            <Navbar.Brand className="d-none d-md-block" to="/" as={NavLink}>
               <img
                 src={require("../imgs/TGL.jpg")}
                 height="75"
@@ -30,14 +39,21 @@ function NavBarTGL() {
                 alt="TGL logo"
               />
             </Navbar.Brand>
-            <Nav.Link href="#home" active>A Pedido</Nav.Link>
-            <NavDropdown title="Productos" id="basic-nav-dropdown" menuVariant="dark" active>
-              <NavDropdown.Item href="#action/3.1">Pulseras</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+            <Nav.Link to="/apedido" as={NavLink}>A Pedido</Nav.Link>
+            <NavDropdown title="Productos" id="basic-nav-dropdown" menuVariant="dark">
+              <NavDropdown.Item to="/anillos" as={NavLink}>
                 Anillos
               </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item to="/pulseras" as={NavLink}>
+                Pulseras
+              </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link to="/cart" as={NavLink}>
+                <span class="material-symbols-outlined">
+                  shopping_cart
+                </span>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

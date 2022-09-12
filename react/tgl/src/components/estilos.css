@@ -34,3 +34,8 @@
 .col-md h2{
     margin-top: 1.5rem;
 }
+
+.material-symbols-outlined {
+    color: #FFFFFF;
+    font-weight: 300;
+}
