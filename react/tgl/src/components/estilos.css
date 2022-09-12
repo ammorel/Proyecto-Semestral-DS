@@ -39,3 +39,19 @@
     color: #FFFFFF;
     font-weight: 300;
 }
+
+.form-label{
+    font-family: Helvetica;
+    color: #FFFFFF;
+}
+
+.btn{
+    border-color: #B8C7AB;
+    background-color: #B8C7AB;
+    font-family: Helvetica;
+}
+
+.btn:hover{
+    background-color: #B8C7AB;
+    border-color: #B8C7AB;
+}
