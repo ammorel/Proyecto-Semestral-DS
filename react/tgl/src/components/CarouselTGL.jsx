@@ -11,8 +11,8 @@ function CarouselTGL() {
           alt="First slide"
         />
         <Carousel.Caption className="text-end">
-          <h3>NUEVA COLECCIÓN</h3>
-          <p>Loot Ring y Wrist Chain en variedades de colores.</p>
+          <h3>COMPLETA TU LOOK</h3>
+          <h4>con un toque de vidrio</h4>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>

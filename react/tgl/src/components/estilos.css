@@ -36,6 +36,10 @@
 }
 
 .material-symbols-outlined {
-    color: #FFFFFF;
+    color: #8c8c8c;
     font-weight: 300;
+}
+
+.material-symbols-outlined:hover{
+    color: #FFFFFF;
 }
