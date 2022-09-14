@@ -16,6 +16,10 @@
     margin-left: 3px;
 }
 
+.dropdown-menu{
+    font-family: Helvetica;
+}
+
 .carousel-caption{
     font-family: Helvetica;
 }
