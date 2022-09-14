@@ -7,7 +7,7 @@ import "./estilos.css"
 
 function NavBarTGL() {
   return (
-    <Navbar bg="black" variant="dark" expand="md">
+    <Navbar sticky="top" bg="black" variant="dark" expand="md">
       <Container>
         <Navbar.Brand className="d-md-none" to="/" as={NavLink}>
           <img
