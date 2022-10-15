@@ -56,7 +56,7 @@ export default function Footer() {
             </MDBCol>
 
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-              <h6 className='fw-bold mb-4'>Contact</h6>
+              <h6 className='fw-bold mb-4'>Sobre TGL</h6>
               <p>
                 <a href='/nosotros' className='text-reset'>Nosotros
                 </a>
@@ -67,7 +67,7 @@ export default function Footer() {
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2021 Copyright:{' '}
+        © 2022 Copyright:{' '}
         <a className='text-reset fw-bold' href='/'>TheGlassLab
         </a>
       </div>
