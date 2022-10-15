@@ -11,20 +11,23 @@ import APedido from './components/APedido';
 import Anillos from './components/Anillos';
 import Pulseras from './components/Pulseras';
 import { Routes, Route } from "react-router-dom";
+import { CarritoProvider } from './components/Carrito.tsx';
 
 function App() {
   return (
       <div className="App">
-        <NavBarTGL />
-          <Routes>
-            <Route path='/' element={<><CarouselTGL /><ColRows /></>}/>
-            <Route path='/informacion' element={<Info />}/>
-            <Route path='/contacto' element={<Contacto />}/>
-            <Route path='/apedido' element={<APedido />}/>
-            <Route path='/anillos' element={<Anillos />}/>
-            <Route path='/pulseras' element={<Pulseras />}/>
-            <Route path='/cart' element={<Cart />}/>
-          </Routes>
+        <CarritoProvider>
+          <NavBarTGL />
+            <Routes>
+              <Route path='/' element={<><CarouselTGL /><ColRows /></>}/>
+              <Route path='/informacion' element={<Info />}/>
+              <Route path='/contacto' element={<Contacto />}/>
+              <Route path='/apedido' element={<APedido />}/>
+              <Route path='/anillos' element={<Anillos />}/>
+              <Route path='/pulseras' element={<Pulseras />}/>
+              <Route path='/cart' element={<Cart />}/>
+            </Routes>
+          </CarritoProvider>
       </div>
   );
 }
