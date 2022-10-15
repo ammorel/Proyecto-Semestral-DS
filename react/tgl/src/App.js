@@ -11,9 +11,11 @@ import Anillos from './components/Anillos';
 import Pulseras from './components/Pulseras';
 import Footer from './components/Footer';
 import { Routes, Route } from "react-router-dom";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 function App() {
   return (
+    <PayPalScriptProvider options={{ "client-id": "AW3NwNUKH01AfY20t6Xgfde1RDryvi5cOFhQtP1cBM77jsqx2l5XsUc3WtePJlYJFoZjyn0e_SlrCGnS" }}>
       <div className="App">
         <NavBarTGL />
           <Routes>
@@ -26,6 +28,7 @@ function App() {
           </Routes>
         <Footer />
       </div>
+    </PayPalScriptProvider>
   );
 }
 

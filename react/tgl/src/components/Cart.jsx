@@ -1,8 +1,10 @@
-import Paypal from "./Paypal";
+import Paypal from './Paypal';
 
 function Cart() {
     return (
-        <Paypal />
+        <div className='paypal-button-container'>
+            <Paypal />
+        </div>
     );
 }
 
