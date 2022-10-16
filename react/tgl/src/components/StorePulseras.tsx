@@ -24,8 +24,8 @@ PulseraProps) {
                     <div className="mt-auto">
                         {cantidad === 0 ? (
                             <Button onClick={() => increaseItemQuantity(id)}>+ Agregar al carrito</Button>
-                        ):<div className="d-flex align-items-center flex-column" style={{ gap: ".5rem"}}><div className="d-flex align-items-center justify-content-center" style={{ gap: ".5rem"}}>
-                                <Button onClick={() => decreaseItemQuantity(id)}>-</Button><div><span className="fs-3">{cantidad}</span>en el carrito</div><Button onClick={() => increaseItemQuantity(id)}>+</Button>
+                        ):<div className="d-flex align-items-center flex-column text-muted" style={{ gap: ".5rem", color: "#FFFFFF"}}><div className="d-flex align-items-center justify-content-center" style={{ gap: ".5rem"}}>
+                            <Button onClick={() => decreaseItemQuantity(id)}>-</Button><div><span className="fs-3 text-muted" style={{color: "#FFFFFF"}}>{cantidad}</span>en el carrito</div><Button onClick={() => increaseItemQuantity(id)}>+</Button>
                             </div><Button size="sm" onClick={() => removeFromCart(id)}>Eliminar</Button></div>}
                     </div>
                 </Card.Body>

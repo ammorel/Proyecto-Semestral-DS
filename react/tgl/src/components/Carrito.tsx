@@ -9,10 +9,10 @@ type CarritoContext = {
     cartQuantity: number
     cartItems: CartItem[]
 }
-const CarritoContext = createContext({} as CarritoContext)
+const Carrito = createContext({} as CarritoContext)
 
 export function useCarrito() {
-    return useContext(CarritoContext)
+    return useContext(Carrito)
 }
 
 type CarritoProviderProps = {
@@ -66,5 +66,5 @@ export function CarritoProvider( { children }:CarritoProviderProps) {
             return currItems.filter(item => item.id !== id)
         })
     }
-    return <CarritoContext.Provider value={{ getItemQuantity, increaseItemQuantity, decreaseItemQuantity, removeFromCart, cartItems, cartQuantity}}>{children}</CarritoContext.Provider>
+    return <Carrito.Provider value={{ getItemQuantity, increaseItemQuantity, decreaseItemQuantity, removeFromCart, cartItems, cartQuantity}}>{children}</Carrito.Provider>
 }
