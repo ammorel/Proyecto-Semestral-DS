@@ -25,10 +25,11 @@
 }
 
 .col-md{
-    margin-top: 1.5rem;
+    margin-top: 3rem;
     text-align: center;
     font-family: Helvetica;
     color: #FFFFFF;
+    margin-bottom: 3rem;
 }
 
 .col-md img{
@@ -62,4 +63,10 @@
 .btn:hover{
     background-color: #B8C7AB;
     border-color: #B8C7AB;
+}
+
+.contacto{
+    text-align: justify;
+    color: #FFFFFF;
+    font-family: Helvetica;
 }

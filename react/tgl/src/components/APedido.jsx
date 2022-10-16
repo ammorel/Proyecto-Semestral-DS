@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { NavLink } from "react-router-dom"
+import './estilos.css';
 
 function APedido() {
   const [show, setShow] = useState(false);
@@ -29,7 +30,7 @@ function APedido() {
         </Form.Group>  
         
         </Form>
-        <Button type="submit" onClick={handleShow}>
+        <Button type="submit" onClick={handleShow} style={{marginBottom:'3rem'}}>
             Pedir
         </Button> 
         <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false}>

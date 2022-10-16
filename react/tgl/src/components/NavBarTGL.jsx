@@ -23,15 +23,7 @@ function NavBarTGL() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
             <Nav.Link to="/" as={NavLink}>Inicio</Nav.Link>
-            <NavDropdown title="Nosotros" id="basic-nav-dropdown" menuVariant="dark">
-              <NavDropdown.Item to="/informacion" as={NavLink}>
-                Información
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item to="/contacto" as={NavLink}>
-                Contacto
-              </NavDropdown.Item>
-            </NavDropdown> 
+            <Nav.Link to="/nosotros" as={NavLink}>Nosotros</Nav.Link>
             <Nav.Link href="https://www.instagram.com/theglasslab.cl/" target="_blank">Instagram</Nav.Link>
             <Navbar.Brand className="d-none d-md-block" to="/" as={NavLink}>
               <img
