@@ -22,8 +22,7 @@ function App() {
           <NavBarTGL />
             <Routes>
               <Route path='/' element={<><CarouselTGL /><ColRows /></>}/>
-              <Route path='/informacion' element={<Info />}/>
-              <Route path='/contacto' element={<Contacto />}/>
+              <Route path='/nosotros' element={<Nosotros />}/>
               <Route path='/apedido' element={<APedido />}/>
               <Route path='/anillos' element={<Anillos />}/>
               <Route path='/pulseras' element={<Pulseras />}/>
