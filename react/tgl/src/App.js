@@ -27,7 +27,7 @@ function App() {
               <Route path='/pulseras' element={<Pulseras />}/>
               <Route path='/cart' element={<Cart />}/>
             </Routes>
-          </CarritoProvider>
+        </CarritoProvider>
       </div>
   );
 }
