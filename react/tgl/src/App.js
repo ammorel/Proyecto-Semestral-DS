@@ -11,22 +11,26 @@ import Anillos from './components/Anillos';
 import Pulseras from './components/Pulseras';
 import Footer from './components/Footer';
 import { Routes, Route } from "react-router-dom";
+import { CarritoProvider } from './components/Carrito.tsx';
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 function App() {
   return (
     <PayPalScriptProvider options={{ "client-id": "AW3NwNUKH01AfY20t6Xgfde1RDryvi5cOFhQtP1cBM77jsqx2l5XsUc3WtePJlYJFoZjyn0e_SlrCGnS" }}>
       <div className="App">
-        <NavBarTGL />
-          <Routes>
-            <Route path='/' element={<><CarouselTGL /><ColRows /></>}/>
-            <Route path='/nosotros' element={<Nosotros />}/>
-            <Route path='/apedido' element={<APedido />}/>
-            <Route path='/anillos' element={<Anillos />}/>
-            <Route path='/pulseras' element={<Pulseras />}/>
-            <Route path='/cart' element={<Cart />}/>
-          </Routes>
-        <Footer />
+        <CarritoProvider>
+          <NavBarTGL />
+            <Routes>
+              <Route path='/' element={<><CarouselTGL /><ColRows /></>}/>
+              <Route path='/informacion' element={<Info />}/>
+              <Route path='/contacto' element={<Contacto />}/>
+              <Route path='/apedido' element={<APedido />}/>
+              <Route path='/anillos' element={<Anillos />}/>
+              <Route path='/pulseras' element={<Pulseras />}/>
+              <Route path='/cart' element={<Cart />}/>
+            </Routes>
+          <Footer />
+        </CarritoProvider>
       </div>
     </PayPalScriptProvider>
   );
