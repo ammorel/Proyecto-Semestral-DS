@@ -1,6 +1,10 @@
+import Paypal from './Paypal';
+
 function Cart() {
     return (
-        <h1>Carrito de compras de la tienda</h1>
+        <div className='paypal-button-container d-flex justify-content-center'>
+            <Paypal />
+        </div>
     );
 }
 
