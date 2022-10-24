@@ -1,5 +1,6 @@
-import { createContext, ReactNode, useContext, useState } from "react"
+import { createContext, ReactNode, useContext } from "react"
 import React from 'react'
+import { useLocalStorage } from "./useLocalStorage.tsx";
 
 type CarritoContext = {
     getItemQuantity: (id:number) => number
@@ -23,7 +24,10 @@ type CartItem = {
     cantidad: number
 }
 export function CarritoProvider( { children }:CarritoProviderProps) {
-    const [cartItems, setCartItems] = useState<CartItem[]>([])
+    const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
+        "shopping-cart",
+        []
+    )
     const cartQuantity = cartItems.reduce((cantidad, item) => 
     item.cantidad + cantidad, 0
     )
