@@ -1,4 +1,4 @@
-import storePulseras from ".//data/pulseras.json"
+import storePulseras from "./data/pulseras.json"
 import { Row, Col } from "react-bootstrap"
 import { Pulsera } from "./StorePulseras.tsx";
 

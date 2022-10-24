@@ -1,4 +1,4 @@
-import storeAnillos from ".//data/anillos.json"
+import storeAnillos from "./data/anillos.json"
 import { Row, Col } from "react-bootstrap"
 import { Anillo } from "./StoreAnillos.tsx";
 import React from "react";
