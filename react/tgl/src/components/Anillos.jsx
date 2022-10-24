@@ -5,14 +5,15 @@ import React from "react";
 
 function Anillos() {
     return (
-        <Row md={2} xs={1} lg={3} className="g-3" style={{ marginBottom: '3rem'}}>
-            {storeAnillos.map(item => (
-                <Col key={item.id}>
-                    <Anillo {...item["data"]}/>
-                </Col>    
-            ))}
-            
-        </Row>
+        <div className="container">
+            <Row md={2} xs={1} lg={3} className="g-3" style={{ marginBottom: '3rem'}}>
+                {storeAnillos.map(item => (
+                    <Col key={item.id}>
+                        <Anillo {...item["data"]}/>
+                    </Col>
+                ))}
+            </Row>
+        </div>
     );
 }
 
