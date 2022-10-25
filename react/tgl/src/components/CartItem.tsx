@@ -1,5 +1,5 @@
 import { useCarrito } from "./Carrito.tsx";
-import storeAnillos from "./data/anillos.json"
+import storeAnillos from "./data/items.json"
 import { Stack } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 
@@ -11,16 +11,16 @@ type CartItemProps = {
 export function CartItem({ id, quantity}: CartItemProps) {
     const { removeFromCart } = useCarrito()
     
-    const item = storeAnillos.find(i => i.id === id)
+    const item = storeAnillos.find(i => i.data.id === id)
     if (item == null) return null
 
     return (
         <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
-            <img src={item.imagen} style={{ width:"125px", height:"75px", objectFit:"cover"}} alt="imagen producto"/>
+            <img src={item.data.imagen} style={{ width:"125px", height:"75px", objectFit:"cover"}} alt="imagen producto"/>
         
             <div className="me-auto">
                 <div>
-                    {item.nombre}{" "} 
+                    {item.data.nombre}{" "} 
                     {cantidad > 1 && (
                         <span className="text-muted" style={{ fontSize: ".65rem" }}>
                             x{cantidad}
@@ -28,10 +28,10 @@ export function CartItem({ id, quantity}: CartItemProps) {
                     )}
                 </div>
                 <div className="text-muted" style={{ fontSize:".75rem"}}>
-                    {item.precio}
+                    {item.data.precio}
                 </div>
             </div>
-            <Button variant='outline-danger' size='sm' onClick={() => removeFromCart(item.id)}>&times;</Button>
+            <Button variant='outline-danger' size='sm' onClick={() => removeFromCart(item.data.id)}>&times;</Button>
         </Stack>
     )
 }
