@@ -16,8 +16,8 @@ import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 function App() {
   return (
     <PayPalScriptProvider options={{ "client-id": "AW3NwNUKH01AfY20t6Xgfde1RDryvi5cOFhQtP1cBM77jsqx2l5XsUc3WtePJlYJFoZjyn0e_SlrCGnS" }}>
+      <CarritoProvider>
       <div className="App">
-        <CarritoProvider>
           <NavBarTGL />
             <Routes>
               <Route path='/' element={<><CarouselTGL /><ColRows /></>}/>
@@ -27,9 +27,10 @@ function App() {
               <Route path='/cart' element={<Cart />}/>
             </Routes>
           <Footer />
-        </CarritoProvider>
       </div>
+      </CarritoProvider>
     </PayPalScriptProvider>
+    
   );
 }
 
