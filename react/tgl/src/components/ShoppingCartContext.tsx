@@ -2,6 +2,14 @@ import { createContext, ReactNode, useContext } from "react"
 import React from 'react'
 import { useLocalStorage } from "./useLocalStorage.tsx";
 
+type CarritoProviderProps = {
+    children: ReactNode
+}
+
+type CartItem = {
+    id: number
+    cantidad: number
+}
 type CarritoContext = {
     getItemQuantity: (id:number) => number
     increaseItemQuantity: (id:number) => void
@@ -11,18 +19,11 @@ type CarritoContext = {
     cartItems: CartItem[]
 }
 const Carrito = createContext({} as CarritoContext)
-
 export function useCarrito() {
     return useContext(Carrito)
 }
 
-type CarritoProviderProps = {
-    children: ReactNode
-}
-type CartItem = {
-    id: number
-    cantidad: number
-}
+
 export function CarritoProvider( { children }:CarritoProviderProps) {
     const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
         "shopping-cart",
@@ -70,5 +71,5 @@ export function CarritoProvider( { children }:CarritoProviderProps) {
             return currItems.filter(item => item.id !== id)
         })
     }
-    return <Carrito.Provider value={{ getItemQuantity, increaseItemQuantity, decreaseItemQuantity, removeFromCart, cartItems, cartQuantity}}>{children}</Carrito.Provider>
+    return <Carrito.Provider value={{ getItemQuantity, increaseItemQuantity, decreaseItemQuantity, removeFromCart, cartQuantity, cartItems}}>{children}</Carrito.Provider>
 }

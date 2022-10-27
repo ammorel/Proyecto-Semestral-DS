@@ -1,37 +1,41 @@
-import { useCarrito } from "./Carrito.tsx";
+import { useCarrito } from "./ShoppingCartContext.tsx";
 import { Stack } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import storeItems from "./data/items.json";
 
 type CartItemProps = {
     id: number,
-    cantidad: number
+    cantidad: number,
 }
 
-export function CartItem({ id, quantity}: CartItemProps) {
+export function CartItem({ id, cantidad}: CartItemProps) {
     const { removeFromCart } = useCarrito()
     
-    const item = storeItems.find(i => i.id === id)
+    const item = storeItems.find(i => i.data.id === id)
     if (item == null) return null
 
     return (
-        <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
-            <img src={item.imagen} style={{ width:"125px", height:"75px", objectFit:"cover"}} alt="imagen producto"/>
-        
-            <div className="me-auto">
-                <div>
-                    {item.nombre}{" "} 
-                    {cantidad > 1 && (
-                        <span className="text-muted" style={{ fontSize: ".65rem" }}>
+        <div className="container">
+            <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
+                <img src={item.data.imagen} alt="" style={{ width: "200px", height: "130px", objectFit: "cover" }}/>
+                <div className="me-auto">
+                    <div style={{ fontSize: "1.5rem" , color:"#FFFFFF"}}>
+                        {item.data.nombre}{" "}
+                        {cantidad > 1 && (
+                        <span className="text-muted" style={{ fontSize: "1rem" }}>
                             x{cantidad}
                         </span>
-                    )}
+                        )}
+                    </div>
+                    <div style={{ fontSize: "1.2rem" , color:"#FFFFFF"}}>
+                        {item.data.precio}
+                    </div>
                 </div>
-                <div className="text-muted" style={{ fontSize:".75rem"}}>
-                    {item.precio}
-                </div>
-            </div>
-            <Button variant='outline-danger' size='sm' onClick={() => removeFromCart(item.id)}>&times;</Button>
-        </Stack>
+                <div style={{ fontSize: "1rem", color:"#FFFFFF"}}> {item.data.precio * cantidad}</div>
+                <Button size="sm" onClick={() => removeFromCart(item.data.id)}>
+                    &times;
+                </Button>
+            </Stack>
+        </div>
     )
 }
