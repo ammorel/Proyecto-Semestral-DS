@@ -1,9 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { NavLink } from "react-router-dom"
-import { useCarrito } from './Carrito.tsx';
+import { useCarrito } from './ShoppingCartContext.tsx';
 import "./estilos.css"
 
 function NavBarTGL() {
@@ -34,18 +33,10 @@ function NavBarTGL() {
               />
             </Navbar.Brand>
             <Nav.Link to="/apedido" as={NavLink}>A Pedido</Nav.Link>
-            <NavDropdown title="Productos" id="basic-nav-dropdown" menuVariant="dark">
-              <NavDropdown.Item to="/anillos" as={NavLink}>
-                Anillos
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item to="/pulseras" as={NavLink}>
-                Pulseras
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link to="/productos" as={NavLink}>Productos</Nav.Link>
             
               <Nav.Link to="/cart" as={NavLink} style={{position: "relative"}}>
-                  <span class="material-symbols-outlined">
+                  <span className="material-symbols-outlined">
                     shopping_cart
                   </span>
                   { cartQuantity > 0 &&( <div className='rounded-circle d-flex justify-content-center align-items-center' style={{color:"white", width:"1.3rem", height:"1.3rem", position:"absolute", bottom:0, right:0, backgroundColor:"#d26941"}}>{ cartQuantity }</div>)}
