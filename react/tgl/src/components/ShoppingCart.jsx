@@ -13,7 +13,7 @@ function Cart() {
                 <CartItem key = {item.id} {...item} />
                 ))}
                 <div className="container">
-                    <div className="ms-auto fw-bold fs-5" style={{color:"#FFFFFF"}}>
+                    <div className="ms-auto fw-bold fs-5" style={{color:"#FFFFFF", textAlign:"right"}}>
                         Total{" "}
                         {cartItems.reduce((total, cartItem) => {
                             const item = storeItems.find(i => i.data.id === cartItem.id)

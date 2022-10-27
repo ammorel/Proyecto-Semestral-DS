@@ -30,15 +30,15 @@ export default function Footer() {
             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
               <h6 className='fw-bold mb-4'>Menú</h6>
               <p>
-                <a href='/' className='text-reset'>Inicio
+                <a href='/' className='text-reset' style={{textDecoration:'none'}}>Inicio
                 </a>
               </p>
               <p>
-                <a href='/apedido' className='text-reset'>A Pedido
+                <a href='/apedido' className='text-reset' style={{textDecoration:'none'}}>A Pedido
                 </a>
               </p>
               <p>
-                <a href='/cart' className='text-reset'>Carrito
+                <a href='/cart' className='text-reset' style={{textDecoration:'none'}}>Carrito
                 </a>
               </p>
             </MDBCol>
@@ -46,11 +46,11 @@ export default function Footer() {
             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
               <h6 className='fw-bold mb-4'>Productos</h6>
               <p>
-                <a href='/anillos' className='text-reset'>Anillos
+                <a href='/anillos' className='text-reset' style={{textDecoration:'none'}}>Anillos
                 </a>
               </p>
               <p>
-                <a href='/pulseras' className='text-reset'>Pulseras
+                <a href='/pulseras' className='text-reset' style={{textDecoration:'none'}}>Pulseras
                 </a>
               </p>
             </MDBCol>
@@ -58,7 +58,7 @@ export default function Footer() {
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
               <h6 className='fw-bold mb-4'>Sobre TGL</h6>
               <p>
-                <a href='/nosotros' className='text-reset'>Nosotros
+                <a href='/nosotros' className='text-reset' style={{textDecoration:'none'}}>Nosotros
                 </a>
               </p>
             </MDBCol>
@@ -68,7 +68,7 @@ export default function Footer() {
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
         © 2022 Copyright:{' '}
-        <a className='text-reset fw-bold' href='/'>TheGlassLab
+        <a className='text-reset fw-bold' href='/' style={{textDecoration:'none'}}>TheGlassLab
         </a>
       </div>
     </MDBFooter>
