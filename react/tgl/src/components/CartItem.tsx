@@ -45,7 +45,7 @@ export function CartItem({ id, cantidad}: CartItemProps) {
                         {item.data.precio}
                     </div>
                 </div>
-                <div style={{ fontSize: "1rem", color:"#FFFFFF"}}> {item.data.precio * cantidad}</div>
+                <div style={{ fontSize: "1rem", color:"#FFFFFF"}}> {item.data.precio * cantidad * 1000}</div>
                 <Button size="sm" onClick={() => removeFromCart(item.data.id)}>
                     &times;
                 </Button>

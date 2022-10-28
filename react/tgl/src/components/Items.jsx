@@ -9,6 +9,7 @@ function Items() {
         fetch(formio)
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             setItems(data);
         })
     }
