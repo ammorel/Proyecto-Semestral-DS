@@ -2,10 +2,24 @@ import Paypal from './Paypal';
 import { Stack } from "react-bootstrap"
 import { useCarrito } from "./ShoppingCartContext.tsx";
 import { CartItem } from "./CartItem.tsx";
-import storeItems from "./data/items.json";
+import React, { useEffect, useState } from "react";
 
 function Cart() {
     const {cartItems} = useCarrito()
+    const [storeItems, setItems] = useState([]);
+    const formio = 'https://hyqizwlialyogdk.form.io/items/submission';
+    function pullJson() {
+        fetch(formio)
+        .then(response => response.json())
+        .then(data => {
+            setItems(data);
+        })
+    }
+  
+    useEffect(() => {
+      pullJson();
+  
+    }, [])
     return (
         <div>
             <Stack gap={3}>

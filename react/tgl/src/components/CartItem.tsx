@@ -1,7 +1,7 @@
 import { useCarrito } from "./ShoppingCartContext.tsx";
 import { Stack } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
-import storeItems from "./data/items.json";
+import React, { useEffect, useState } from "react";
 
 type CartItemProps = {
     id: number,
@@ -10,6 +10,20 @@ type CartItemProps = {
 
 export function CartItem({ id, cantidad}: CartItemProps) {
     const { removeFromCart } = useCarrito()
+    const [storeItems, setItems] = useState([]);
+    const formio = 'https://hyqizwlialyogdk.form.io/items/submission';
+    function pullJson() {
+        fetch(formio)
+        .then(response => response.json())
+        .then(data => {
+            setItems(data);
+        })
+    }
+  
+    useEffect(() => {
+      pullJson();
+  
+    }, [])
     
     const item = storeItems.find(i => i.data.id === id)
     if (item == null) return null
