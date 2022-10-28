@@ -22,11 +22,12 @@ function Cart() {
     }, [])
     return (
         <div>
+            <div className="container" style={{marginBottom: '1.5rem'}}>
+            <h2 style={{color:"#FFFFFF", marginBottom: '3rem'}}>Carrito de Compras</h2>
             <Stack gap={3}>
                 {cartItems.map(item => (    
                 <CartItem key = {item.id} {...item} />
                 ))}
-                <div className="container">
                     <div className="ms-auto fw-bold fs-5" style={{color:"#FFFFFF", textAlign:"right"}}>
                         Total{" "}
                         {cartItems.reduce((total, cartItem) => {
@@ -35,8 +36,8 @@ function Cart() {
                             }, 0)
                         }
                     </div>
-                </div>
             </Stack>
+            </div>
             
             <div className='paypal-button-container d-flex justify-content-center'>
                 <Paypal />
