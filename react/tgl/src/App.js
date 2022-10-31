@@ -7,7 +7,9 @@ import ColRows from './components/ColumnsRows';
 import Cart from './components/ShoppingCart';
 import Nosotros from './components/Nosotros';
 import APedido from './components/APedido';
-import Items from './components/Items';
+import Anillos from './components/Anillos';
+import Pulseras from './components/Pulseras';
+// import Items from './components/Items';
 import Footer from './components/Footer';
 import { Routes, Route } from "react-router-dom";
 import { CarritoProvider } from './components/ShoppingCartContext.tsx';
@@ -24,7 +26,8 @@ function App() {
               <Route path='/' element={<><CarouselTGL /><ColRows /></>}/>
               <Route path='/nosotros' element={<Nosotros />}/>
               <Route path='/apedido' element={<APedido />}/>
-              <Route path='/productos' element={<Items />}/>
+              <Route path='/anillos' element={<Anillos />}/>
+              <Route path='/pulseras' element={<Pulseras />}/>
               <Route path='/cart' element={<Cart />}/>
             </Routes>
           <Footer />

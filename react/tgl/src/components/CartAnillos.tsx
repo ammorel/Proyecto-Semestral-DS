@@ -8,10 +8,10 @@ type CartItemProps = {
     cantidad: number,
 }
 
-export function CartItem({ id, cantidad}: CartItemProps) {
+export function CartAnillos({ id, cantidad}: CartItemProps) {
     const { removeFromCart } = useCarrito()
     const [storeItems, setItems] = useState([]);
-    const formio = 'https://hyqizwlialyogdk.form.io/items/submission';
+    const formio = 'https://hyqizwlialyogdk.form.io/anillos/submission';
     function pullJson() {
         fetch(formio)
         .then(response => response.json())
