@@ -8,14 +8,14 @@ function ColRows() {
     <Container>
       <Row className="justify-content-md-center">
         <Col md>
-          <a href="/productos">
+          <a href="/anillos">
             <img src={require("../imgs/lootring1.1.jpg")} height="140" alt=""/>
           </a>
           <h2>LOOT RING</h2>
           <p>Anillos duotono. Disponibles en 3 versiones.</p>
         </Col>
         <Col md>
-          <a href="/productos">
+          <a href="/pulseras">
             <img src={require("../imgs/wristchain1.1.jpg")} height="140" alt=""/>
           </a>
           <h2>WRIST CHAIN</h2>
