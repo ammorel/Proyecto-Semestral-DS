@@ -8,17 +8,23 @@ function ColRows() {
     <Container>
       <Row className="justify-content-md-center">
         <Col md>
-          <img src={require("../imgs/lootring1.1.jpg")} height="140" alt=""/>
+          <a href="/anillos">
+            <img src={require("../imgs/lootring1.1.jpg")} height="140" alt=""/>
+          </a>
           <h2>LOOT RING</h2>
           <p>Anillos duotono. Disponibles en 3 versiones.</p>
         </Col>
         <Col md>
-          <img src={require("../imgs/wristchain1.1.jpg")} height="140" alt=""/>
+          <a href="/pulseras">
+            <img src={require("../imgs/wristchain1.1.jpg")} height="140" alt=""/>
+          </a>
           <h2>WRIST CHAIN</h2>
           <p>Cadenas para las muñecas con eslabones de 20mm. Disponible en 3 versiones.</p>
         </Col>
         <Col md>
-          <img src={require("../imgs/collar1.jpg")} height="140" alt=""/>
+          <a href="/apedido">
+            <img src={require("../imgs/collar1.jpg")} height="140" alt=""/>
+          </a>
           <h2>A PEDIDO</h2>
           <p>Danos tu idea de anillo, pulsera u otro accesesorio y lo hacemos.</p>
         </Col>

@@ -1,15 +1,29 @@
 import { useCarrito } from "./ShoppingCartContext.tsx";
 import { Stack } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
-import storeItems from "./data/items.json";
+import React, { useEffect, useState } from "react";
 
 type CartItemProps = {
     id: number,
     cantidad: number,
 }
 
-export function CartItem({ id, cantidad}: CartItemProps) {
+export function CartAnillos({ id, cantidad}: CartItemProps) {
     const { removeFromCart } = useCarrito()
+    const [storeItems, setItems] = useState([]);
+    const formio = 'https://hyqizwlialyogdk.form.io/anillos/submission';
+    function pullJson() {
+        fetch(formio)
+        .then(response => response.json())
+        .then(data => {
+            setItems(data);
+        })
+    }
+  
+    useEffect(() => {
+      pullJson();
+  
+    }, [])
     
     const item = storeItems.find(i => i.data.id === id)
     if (item == null) return null
@@ -31,7 +45,7 @@ export function CartItem({ id, cantidad}: CartItemProps) {
                         {item.data.precio}
                     </div>
                 </div>
-                <div style={{ fontSize: "1rem", color:"#FFFFFF"}}> {item.data.precio * cantidad}</div>
+                <div style={{ fontSize: "1rem", color:"#FFFFFF"}}> {item.data.precio * cantidad * 1000}</div>
                 <Button size="sm" onClick={() => removeFromCart(item.data.id)}>
                     &times;
                 </Button>
