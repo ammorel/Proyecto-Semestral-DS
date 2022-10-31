@@ -35,18 +35,10 @@ function Cart() {
         <div>
             <div className="container" style={{marginBottom: '1.5rem'}}>
             <h2 style={{color:"#FFFFFF", marginBottom: '3rem'}}>Carrito de Compras</h2>
-            <Stack gap={3}>
+            <Stack gap={3} style={{marginBottom: '1rem'}}>
                 {cartItems.map(item => (    
                 <CartAnillos key = {item.id} {...item} />
                 ))}
-                    <div className="ms-auto fw-bold fs-5" style={{color:"#FFFFFF", textAlign:"right"}}>
-                        Total{" "}
-                        {cartItems.reduce((total, cartItem) => {
-                            const item = storeAnillos.find(i => i.data.id === cartItem.id)
-                            return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
-                            }, 0)
-                        }
-                    </div>
             </Stack>
             <Stack gap={3}>
                 {cartItems.map(item => (    
