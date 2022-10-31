@@ -34,7 +34,7 @@ function Cart() {
     return (
         <div>
             <div className="container" style={{marginBottom: '1.5rem'}}>
-            <h2 style={{color:"#FFFFFF", marginBottom: '3rem'}}>Carrito de Compras</h2>
+            <h2 style={{color:"#FFFFFF", marginBottom: '2.5rem'}}>Carrito de Compras</h2>
             <Stack gap={3} style={{marginBottom: '1rem'}}>
                 {cartItems.map(item => (    
                 <CartAnillos key = {item.id} {...item} />
