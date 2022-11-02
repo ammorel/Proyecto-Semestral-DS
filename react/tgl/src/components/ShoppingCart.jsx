@@ -53,7 +53,7 @@ function Cart() {
                         }
                     </div>
             </Stack>
-            </div>
+        </div>
             
             <div className='paypal-button-container d-flex justify-content-center'>
                 <Paypal />

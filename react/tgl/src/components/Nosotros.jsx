@@ -1,5 +1,6 @@
 import Figure from 'react-bootstrap/Figure';
 import React from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { MDBIcon } from 'mdb-react-ui-kit';
@@ -16,8 +17,8 @@ function Nosotros() {
       />
       <div className="container">
         <Figure.Caption style={{fontFamily: 'Helvetica', color: 'white'}}>
-            <h2>Sobre TGL</h2>
-            <p>Que hace la tienda? no se</p>
+          <h2>Sobre TGL</h2>
+          <p>Comenzó en 2021 como un proyecto de producción de pipas, luego en 2022 se tranformó en lo que es hoy, un emprendimiento de accesorios de vidrio soplado hechos a mano. Dentro de los productos que se ofrecen hay anillos disponibles en una variedad de colores con detalles en braile. También, hay pulseras conformadas por eslabones de vidrio unidos por una cadena. Por último, existen los proyectos especiales que se realizan por medio de pedidos. </p>
         </Figure.Caption>
       </div>
     </Figure>

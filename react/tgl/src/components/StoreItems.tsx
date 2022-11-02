@@ -19,11 +19,11 @@ ItemProps) {
                 <Card.Body className="d-flex flex-column">
                     <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
                         <span className="fs-2" style={{color:"#FFFFFF"}}>{nombre}</span>
-                        <span className="ms-2 text-muted">{precio}</span>
+                        <span className="ms-2 text-muted">${precio}</span>
                     </Card.Title>
                     <div className="mt-auto">
                         {cantidad === 0 ? (
-                            <Button onClick={() => increaseItemQuantity(id)}>+ Agregar al carrito</Button>
+                            <Button className="w-100" onClick={() => increaseItemQuantity(id)}>+ Agregar al carrito</Button>
                         ):<div className="d-flex align-items-center flex-column text-muted" style={{ gap: ".5rem", color: "#FFFFFF"}}><div className="d-flex align-items-center justify-content-center" style={{ gap: ".5rem"}}>
                                 <Button onClick={() => decreaseItemQuantity(id)}>-</Button><div><span className="fs-5 text-muted" style={{color: "#FFFFFF"}}>{cantidad} </span>en el carrito</div><Button onClick={() => increaseItemQuantity(id)}>+</Button>
                             </div><Button size="sm" onClick={() => removeFromCart(id)}>Eliminar</Button></div>}
