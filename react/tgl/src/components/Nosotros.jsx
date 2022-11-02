@@ -1,6 +1,5 @@
 import Figure from 'react-bootstrap/Figure';
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { MDBIcon } from 'mdb-react-ui-kit';

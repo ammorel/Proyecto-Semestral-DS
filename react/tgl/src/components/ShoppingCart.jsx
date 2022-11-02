@@ -8,18 +8,10 @@ import React, { useEffect, useState } from "react";
 function Cart() {
     const {cartItems} = useCarrito()
 
-    const [storeAnillos, setAnillos] = useState([]);
-    const formioAnillos = 'https://hyqizwlialyogdk.form.io/items/submission';
-
     const [storePulseras, setPulseras] = useState([]);
     const formioPulseras = 'https://hyqizwlialyogdk.form.io/items/submission';
 
     function pullJson() {
-        fetch(formioAnillos)
-        .then(response => response.json())
-        .then(data => {
-            setAnillos(data);
-        })
         fetch(formioPulseras)
         .then(response => response.json())
         .then(data => {
