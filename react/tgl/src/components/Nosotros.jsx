@@ -2,47 +2,85 @@ import Figure from 'react-bootstrap/Figure';
 import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Carousel from 'react-bootstrap/Carousel';
 import { MDBIcon } from 'mdb-react-ui-kit';
 import './estilos.css';
 
 function Nosotros() {
   return (
     <>
-        <Figure>
-      <Figure.Image
-        width={3800}
-        height={450}
-        src={require('../imgs/TGL-wide.png')}
-      />
-      <div className="container">
-        <Figure.Caption style={{fontFamily: 'Helvetica', color: 'white'}}>
-          <h2>Sobre TGL</h2>
-          <p>Comenzó en 2021 como un proyecto de producción de pipas, luego en 2022 se tranformó en lo que es hoy, un emprendimiento de accesorios de vidrio soplado hechos a mano. Dentro de los productos que se ofrecen hay anillos disponibles en una variedad de colores con detalles en braile. También, hay pulseras conformadas por eslabones de vidrio unidos por una cadena. Por último, existen los proyectos especiales que se realizan por medio de pedidos. </p>
-        </Figure.Caption>
-      </div>
-    </Figure>
+      <Figure>
+        <Figure.Image
+          width={3800}
+          height={450}
+          src={require('../imgs/TGL-wide.png')}
+        />
+        <div className="container">
+          <Figure.Caption style={{fontFamily: 'Helvetica', color: 'white'}}>
+            <h2>Sobre TGL</h2>
+            <p style={{fontSize:'18px'}}>Comenzó en 2021 como un proyecto de producción de pipas, luego en 2022 se tranformó en lo que es hoy, un emprendimiento de accesorios de vidrio soplado hechos a mano. Dentro de los productos que se ofrecen hay anillos disponibles en una variedad de colores con detalles en braile. También, hay pulseras conformadas por eslabones de vidrio unidos por una cadena. Por último, existen los proyectos especiales que se realizan por medio de pedidos. </p>
+          </Figure.Caption>
+        </div>
+      </Figure>
     <div className="container">
       <section className='border-top'>
-          <Row className="justify-content-md-center">
+          <Row style={{marginTop:'2rem', marginBottom:'2rem'}}>
             <Col md className='contacto'>
               <h2>Contacto</h2>
+              <p>Correos</p>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />
-                info@example.com
+                ammorel@alumnos.uai.cl
               </p>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />
-                info@example.com
+                tpavez@alumnos.uai.cl
+              </p>
+              <p>Números</p>
+              <p>
+                <MDBIcon icon="phone" className="me-3" /> +56 9 6758 2938
               </p>
               <p>
-                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
-              </p>
-              <p>
-                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 89
+                <MDBIcon icon="phone" className="me-3" /> +56 22 804 7218
               </p>
             </Col>
             <Col md>
-              <img src={require("../imgs/logo_lleno.jpg")} height="300" alt=""/>
+            </Col>
+            <Col md>
+              <Carousel style={{height:'320px', width:'320px'}}>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={require("../imgs/logo_lleno.jpg")}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption className="text-end">
+                    <h3>1</h3>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={require('../imgs/TGL.jpg')}
+                    alt="Second slide"
+                  />
+
+                  <Carousel.Caption className="text-start">
+                    <h3>2</h3>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={require('../imgs/logo_vacio.jpg')}
+                    alt="Third slide"
+                  />
+                  <Carousel.Caption>
+                    <h3>3</h3>
+                    <p>Texto 3</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              </Carousel>
             </Col>
           </Row>
       </section>
