@@ -18,7 +18,7 @@ function Nosotros() {
         <div className="container">
           <Figure.Caption style={{fontFamily: 'Helvetica', color: 'white'}}>
             <h2>Sobre TGL</h2>
-            <p style={{fontSize:'18px'}}>Comenzó en 2021 como un proyecto de producción de pipas, luego en 2022 se tranformó en lo que es hoy, un emprendimiento de accesorios de vidrio soplado hechos a mano. Dentro de los productos que se ofrecen hay anillos disponibles en una variedad de colores con detalles en braile. También, hay pulseras conformadas por eslabones de vidrio unidos por una cadena. Por último, existen los proyectos especiales que se realizan por medio de pedidos. </p>
+            <p style={{fontSize:'16px'}}>Comenzó en 2021 como un proyecto de producción de pipas, luego en 2022 se tranformó en lo que es hoy, un emprendimiento de accesorios de vidrio soplado hechos a mano. Dentro de los productos que se ofrecen hay anillos disponibles en una variedad de colores con detalles en braile. También, hay pulseras conformadas por eslabones de vidrio unidos por una cadena. Por último, existen los proyectos especiales que se realizan por medio de pedidos. </p>
           </Figure.Caption>
         </div>
       </Figure>
@@ -51,7 +51,7 @@ function Nosotros() {
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src={require("../imgs/logo_lleno.jpg")}
+                    src={require("../imgs/cadena2.jpg")}
                     alt="First slide"
                   />
                   <Carousel.Caption className="text-end">
@@ -61,21 +61,21 @@ function Nosotros() {
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src={require('../imgs/TGL.jpg')}
+                    src={require('../imgs/jp.jpg')}
                     alt="Second slide"
                   />
 
-                  <Carousel.Caption className="text-start">
+                  <Carousel.Caption>
                     <h3>2</h3>
                   </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src={require('../imgs/logo_vacio.jpg')}
+                    src={require('../imgs/pipa.jpg')}
                     alt="Third slide"
                   />
-                  <Carousel.Caption>
+                  <Carousel.Caption className="text-end">
                     <h3>3</h3>
                     <p>Texto 3</p>
                   </Carousel.Caption>
