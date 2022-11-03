@@ -24,7 +24,7 @@
     font-family: Helvetica;
 }
 
-.col-md{
+.contenido{
     margin-top: 3rem;
     text-align: center;
     font-family: Helvetica;
@@ -32,11 +32,11 @@
     margin-bottom: 3rem;
 }
 
-.col-md img{
+.contenido img{
     border-radius: 50%;
 }
 
-.col-md h2{
+.contenido h2{
     margin-top: 1.5rem;
 }
 
