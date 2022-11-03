@@ -23,6 +23,25 @@ function Cart() {
       pullJson();
   
     }, [])
+
+    const [precio, setPrecio] = useState([]);
+
+    useEffect (() => {
+        console.log(cartItems.reduce((total, cartItem) => {
+            const item = storePulseras.find(i => i.data.id === cartItem.id)
+            return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
+            }, 0))
+        setPrecio(cartItems.reduce((total, cartItem) => {
+            const item = storePulseras.find(i => i.data.id === cartItem.id)
+            return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
+            }, 0))
+    }, [cartItems, storePulseras])
+
+    const product = {
+        description: 'The Glass Lab',
+        price: 100
+    }
+
     return (
         <div>
             <div className="container" style={{marginBottom: '1.5rem'}}>
@@ -48,7 +67,7 @@ function Cart() {
         </div>
             
             <div className='paypal-button-container d-flex justify-content-center'>
-                <Paypal />
+                <Paypal product={product}/>
             </div>
         </div>
     );
