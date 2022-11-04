@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <MDBFooter bgColor='dark' color='white' className='text-center text-lg-start'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
-        <div className='me-5 d-none d-lg-block'>
+        <div className='me-5 d-none d-lg-block' style={{fontFamily: 'Helvetica'}}>
           <span>Síguenos para estar al tanto de nuevos lanzamientos:</span>
         </div>
         <div>
@@ -15,7 +15,7 @@ export default function Footer() {
         </div>
       </section>
 
-      <section className=''>
+      <section className='' style={{fontFamily: 'Helvetica'}}>
         <MDBContainer className='text-center text-md-start mt-5'>
           <MDBRow className='mt-3'>
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
@@ -23,7 +23,7 @@ export default function Footer() {
                 The Glass Lab
               </h6>
               <p>
-                Descripcion de la empresa
+                Tienda de accesorios de vidrio soplado como anillos, pulseras y proyectos especiales.
               </p>
             </MDBCol>
 
