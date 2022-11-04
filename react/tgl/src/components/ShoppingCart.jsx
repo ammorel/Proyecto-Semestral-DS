@@ -27,10 +27,10 @@ function Cart() {
     const [precio, setPrecio] = useState([]);
 
     useEffect (() => {
-        console.log(cartItems.reduce((total, cartItem) => {
-            const item = storePulseras.find(i => i.data.id === cartItem.id)
-            return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
-            }, 0))
+        // console.log(cartItems.reduce((total, cartItem) => {
+        //     const item = storePulseras.find(i => i.data.id === cartItem.id)
+        //     return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
+        //     }, 0))
         setPrecio(cartItems.reduce((total, cartItem) => {
             const item = storePulseras.find(i => i.data.id === cartItem.id)
             return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
@@ -39,7 +39,8 @@ function Cart() {
 
     const product = {
         description: 'The Glass Lab',
-        price: 100
+        price: precio/945
+        
     }
 
     return (
