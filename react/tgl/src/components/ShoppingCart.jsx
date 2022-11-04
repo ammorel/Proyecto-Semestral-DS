@@ -24,22 +24,22 @@ function Cart() {
   
     }, [])
 
-    const [precio, setPrecio] = useState([]);
+    // const [precio, setPrecio] = useState([]);
 
-    useEffect (() => {
-        // console.log(cartItems.reduce((total, cartItem) => {
-        //     const item = storePulseras.find(i => i.data.id === cartItem.id)
-        //     return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
-        //     }, 0))
-        setPrecio(cartItems.reduce((total, cartItem) => {
-            const item = storePulseras.find(i => i.data.id === cartItem.id)
-            return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
-            }, 0))
-    }, [cartItems, storePulseras])
+    // useEffect (() => {
+    //     console.log(cartItems.reduce((total, cartItem) => {
+    //         const item = storePulseras.find(i => i.data.id === cartItem.id)
+    //         return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
+    //         }, 0))
+    //     setPrecio(cartItems.reduce((total, cartItem) => {
+    //         const item = storePulseras.find(i => i.data.id === cartItem.id)
+    //         return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
+    //         }, 0))
+    // }, [cartItems, storePulseras])
 
     const product = {
         description: 'The Glass Lab',
-        price: precio/945
+        price: 47000/926
         
     }
 
