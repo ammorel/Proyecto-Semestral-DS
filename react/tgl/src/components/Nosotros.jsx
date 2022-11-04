@@ -51,23 +51,16 @@ function Nosotros() {
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src={require("../imgs/cadena2.jpg")}
+                    src={require("../imgs/jp.jpg")}
                     alt="First slide"
                   />
-                  <Carousel.Caption className="text-end">
-                    <h3>1</h3>
-                  </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src={require('../imgs/jp.jpg')}
+                    src={require('../imgs/cadena2.jpg')}
                     alt="Second slide"
                   />
-
-                  <Carousel.Caption>
-                    <h3>2</h3>
-                  </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
@@ -75,10 +68,13 @@ function Nosotros() {
                     src={require('../imgs/pipa.jpg')}
                     alt="Third slide"
                   />
-                  <Carousel.Caption className="text-end">
-                    <h3>3</h3>
-                    <p>Texto 3</p>
-                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={require('../imgs/accesorio.jpg')}
+                    alt="Fourth slide"
+                  />
                 </Carousel.Item>
               </Carousel>
             </Col>
