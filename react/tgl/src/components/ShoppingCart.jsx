@@ -39,7 +39,7 @@ function Cart() {
 
     const product = {
         description: 'The Glass Lab',
-        price: 47000/926
+        price: (47000/926).toFixed(2),
         
     }
 
