@@ -8,14 +8,14 @@ import React, { useEffect, useState } from "react";
 function Cart() {
     const {cartItems} = useCarrito()
 
-    const [storePulseras, setPulseras] = useState([]);
-    const formioPulseras = 'https://hyqizwlialyogdk.form.io/items/submission';
+    const [storeItems, setItems] = useState([]);
+    const formioItems = 'https://hyqizwlialyogdk.form.io/items/submission';
 
     function pullJson() {
-        fetch(formioPulseras)
+        fetch(formioItems)
         .then(response => response.json())
         .then(data => {
-            setPulseras(data);
+            setItems(data);
         })
     }
   
@@ -28,20 +28,39 @@ function Cart() {
 
     // useEffect (() => {
     //     console.log(cartItems.reduce((total, cartItem) => {
-    //         const item = storePulseras.find(i => i.data.id === cartItem.id)
+    //         const item = storeItems.find(i => i.data.id === cartItem.id)
     //         return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
     //         }, 0))
     //     setPrecio(cartItems.reduce((total, cartItem) => {
-    //         const item = storePulseras.find(i => i.data.id === cartItem.id)
+    //         const item = storeItems.find(i => i.data.id === cartItem.id)
     //         return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
     //         }, 0))
-    // }, [cartItems, storePulseras])
+    // }, [cartItems, storeItems])
 
-    const product = {
-        description: 'The Glass Lab',
-        price: (47000/926).toFixed(2),
+    // const [precio, setPrecio] = useState(1);
+
+    // var total = (
+    //     cartItems.reduce((total, cartItem) => {
+    //         const item = storeItems.find(i => i.data.id === cartItem.id)
+    //         return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
+    //         }, 0)
+    // )
+
+    // function totalCompra(totalCompra) {
+    //     total = parseFloat((totalCompra/926).toFixed(2))
+    //     setPrecio(total)
+    // }
+
+    // useEffect(() =>
+    //     totalCompra(total)
+    // )
+    // console.log(precio)
+
+    // const product = {
+    //     description: 'The Glass Lab',
+    //     price: precio,
         
-    }
+    // }
 
     return (
         <div>
@@ -57,9 +76,9 @@ function Cart() {
                 <CartPulseras key = {item.id} {...item} />
                 ))}
                     <div className="ms-auto fw-bold fs-5" style={{color:"#FFFFFF", textAlign:"right"}}>
-                        Total{" "}
+                        Total $
                         {cartItems.reduce((total, cartItem) => {
-                            const item = storePulseras.find(i => i.data.id === cartItem.id)
+                            const item = storeItems.find(i => i.data.id === cartItem.id)
                             return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
                             }, 0)
                         }
@@ -68,7 +87,7 @@ function Cart() {
         </div>
             
             <div className='paypal-button-container d-flex justify-content-center'>
-                <Paypal product={product}/>
+                <Paypal/>
             </div>
         </div>
     );
