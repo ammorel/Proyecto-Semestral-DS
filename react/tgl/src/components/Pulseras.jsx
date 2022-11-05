@@ -2,7 +2,7 @@ import { Row, Col } from "react-bootstrap"
 import { Item } from "./StoreItems.tsx";
 import React, { useEffect, useState } from "react";
 
-function Anillos() {
+function Pulseras() {
     const [storeItems, setItems] = useState([]);
     const formio = 'https://hyqizwlialyogdk.form.io/pulseras/submission';
     function pullJson() {
@@ -31,4 +31,4 @@ function Anillos() {
     );
 }
 
-export default Anillos;
+export default Pulseras;

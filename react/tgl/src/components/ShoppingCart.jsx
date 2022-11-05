@@ -8,14 +8,14 @@ import React, { useEffect, useState } from "react";
 function Cart() {
     const {cartItems} = useCarrito()
 
-    const [storePulseras, setPulseras] = useState([]);
-    const formioPulseras = 'https://hyqizwlialyogdk.form.io/items/submission';
+    const [storeItems, setItems] = useState([]);
+    const formioItems = 'https://hyqizwlialyogdk.form.io/items/submission';
 
     function pullJson() {
-        fetch(formioPulseras)
+        fetch(formioItems)
         .then(response => response.json())
         .then(data => {
-            setPulseras(data);
+            setItems(data);
         })
     }
   
@@ -24,18 +24,18 @@ function Cart() {
   
     }, [])
 
-    // const [precio, setPrecio] = useState([]);
+    // zconst [precio, setPrecio] = useState([]);
 
     // useEffect (() => {
     //     console.log(cartItems.reduce((total, cartItem) => {
-    //         const item = storePulseras.find(i => i.data.id === cartItem.id)
+    //         const item = storeItems.find(i => i.data.id === cartItem.id)
     //         return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
     //         }, 0))
     //     setPrecio(cartItems.reduce((total, cartItem) => {
-    //         const item = storePulseras.find(i => i.data.id === cartItem.id)
+    //         const item = storeItems.find(i => i.data.id === cartItem.id)
     //         return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
     //         }, 0))
-    // }, [cartItems, storePulseras])
+    // }, [cartItems, storeItems])
 
     const product = {
         description: 'The Glass Lab',
@@ -59,7 +59,7 @@ function Cart() {
                     <div className="ms-auto fw-bold fs-5" style={{color:"#FFFFFF", textAlign:"right"}}>
                         Total{" "}
                         {cartItems.reduce((total, cartItem) => {
-                            const item = storePulseras.find(i => i.data.id === cartItem.id)
+                            const item = storeItems.find(i => i.data.id === cartItem.id)
                             return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
                             }, 0)
                         }
