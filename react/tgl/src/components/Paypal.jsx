@@ -44,6 +44,19 @@ const ButtonWrapper = ({ showSpinner }) => {
 
     const [{ isPending }] = usePayPalScriptReducer();
 
+    const [paidFor, setPaidFor] = useState(false);
+    const [error, setError] = useState(null);
+
+    const handleApproval = orderID => {
+        setPaidFor(true);
+    }
+
+    if(paidFor) {
+        alert('Gracias por su compra!');
+    }
+    if(error) {
+        alert('Hubo un error con su compra, por favor intente de nuevo');
+    }
 
     return (<>
             { (showSpinner && isPending) && <div className="spinner" /> }
@@ -64,15 +77,12 @@ const ButtonWrapper = ({ showSpinner }) => {
                                 },
                             ],
                         })
-                        .then((orderId) => {
-                            // Your code here after create the order
-                            return orderId;
-                        });
                 }}
-                onApprove={function (data, actions) {
-                    return actions.order.capture().then(function () {
-                        // Your code here after capture the order
-                    });
+                onApprove={async(data, actions) => {
+                    handleApproval(data.OrderID);
+                }}
+                onError={error => {
+                    setError(error);
                 }}
             />
         </>
