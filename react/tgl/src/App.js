@@ -1,4 +1,3 @@
-// import './App.css';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBarTGL from './components/NavBarTGL';
@@ -9,16 +8,12 @@ import Nosotros from './components/Nosotros';
 import APedido from './components/APedido';
 import Anillos from './components/Anillos';
 import Pulseras from './components/Pulseras';
-// import Items from './components/Items';
 import Footer from './components/Footer';
 import { Routes, Route } from "react-router-dom";
 import { CarritoProvider } from './components/ShoppingCartContext.tsx';
-import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 function App() {
-  return (
-    <PayPalScriptProvider options={{ "client-id": "AW3NwNUKH01AfY20t6Xgfde1RDryvi5cOFhQtP1cBM77jsqx2l5XsUc3WtePJlYJFoZjyn0e_SlrCGnS" }}>
-      
+  return (      
       <div className="App">
         <CarritoProvider>
           <NavBarTGL />
@@ -32,10 +27,7 @@ function App() {
             </Routes>
           <Footer />
         </CarritoProvider>  
-      </div>
-      
-    </PayPalScriptProvider>
-    
+      </div>   
   );
 }
 

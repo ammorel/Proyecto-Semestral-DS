@@ -24,44 +24,6 @@ function Cart() {
   
     }, [])
 
-    // const [precio, setPrecio] = useState([]);
-
-    // useEffect (() => {
-    //     console.log(cartItems.reduce((total, cartItem) => {
-    //         const item = storeItems.find(i => i.data.id === cartItem.id)
-    //         return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
-    //         }, 0))
-    //     setPrecio(cartItems.reduce((total, cartItem) => {
-    //         const item = storeItems.find(i => i.data.id === cartItem.id)
-    //         return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
-    //         }, 0))
-    // }, [cartItems, storeItems])
-
-    // const [precio, setPrecio] = useState(1);
-
-    // var total = (
-    //     cartItems.reduce((total, cartItem) => {
-    //         const item = storeItems.find(i => i.data.id === cartItem.id)
-    //         return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
-    //         }, 0)
-    // )
-
-    // function totalCompra(totalCompra) {
-    //     total = parseFloat((totalCompra/926).toFixed(2))
-    //     setPrecio(total)
-    // }
-
-    // useEffect(() =>
-    //     totalCompra(total)
-    // )
-    // console.log(precio)
-
-    // const product = {
-    //     description: 'The Glass Lab',
-    //     price: precio,
-        
-    // }
-
     return (
         <div>
             <div className="container" style={{marginBottom: '1.5rem'}}>
@@ -84,8 +46,7 @@ function Cart() {
                         }
                     </div>
             </Stack>
-        </div>
-            
+            </div>
             <div className='paypal-button-container d-flex justify-content-center'>
                 <Paypal/>
             </div>
