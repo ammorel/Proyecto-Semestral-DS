@@ -59,34 +59,40 @@ const ButtonWrapper = ({ showSpinner }) => {
     }
 
     return (<>
-            { (showSpinner && isPending) && <div className="spinner" /> }
-            <PayPalButtons
-                style={style}
-                disabled={false}
-                forceReRender={[total, currency, style]}
-                fundingSource={undefined}
-                createOrder={(data, actions) => {
-                    return actions.order
-                        .create({
-                            purchase_units: [
-                                {
-                                    amount: {
-                                        currency_code: currency,
-                                        value: total,
-                                    },
+        { (showSpinner && isPending) && <div className="spinner" /> }
+        <PayPalButtons
+            style={style}
+            disabled={false}
+            forceReRender={[total, currency, style]}
+            fundingSource={undefined}
+            createOrder={(data, actions) => {
+                return actions.order
+                    .create({
+                        purchase_units: [
+                            {
+                                description: "TGL Products",
+                                amount: {
+                                    currency_code: currency,
+                                    value: total,
                                 },
-                            ],
-                        })
-                }}
-                onApprove={async(data, actions) => {
-                    handleApproval(data.OrderID);
-                }}
-                onError={error => {
-                    setError(error);
-                }}
-            />
-        </>
-    );
+                            },
+                        ],
+                    })
+                    .then((orderId) => {
+                        return orderId;
+                    });
+            }}
+            onApprove={function (data, actions) {
+                return actions.order.capture().then(function () {
+                    handleApproval(data.orderID);
+                });
+            }}
+            onError={function (err) {
+                setError(err);
+            }}
+        />
+    </>
+);
 }
 
 const Paypal = () =>{
@@ -94,7 +100,7 @@ const Paypal = () =>{
 		<div>
             <PayPalScriptProvider
                 options={{
-                    "client-id": "test",
+                    "client-id": "AW3NwNUKH01AfY20t6Xgfde1RDryvi5cOFhQtP1cBM77jsqx2l5XsUc3WtePJlYJFoZjyn0e_SlrCGnS",
                     components: "buttons",
                     currency: "USD",
                 }}
