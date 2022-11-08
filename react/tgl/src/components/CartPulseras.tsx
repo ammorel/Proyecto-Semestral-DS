@@ -45,7 +45,7 @@ export function CartPulseras({ id, cantidad}: CartItemProps) {
                         ${item.data.precio}
                     </div>
                 </div>
-                <div style={{ fontSize: "1rem", color:"#FFFFFF"}}> ${item.data.precio * cantidad * 1000}</div>
+                <div style={{ fontSize: "1rem", color:"#FFFFFF"}}> ${item.data.precio * cantidad}.000</div>
                 <Button size="sm" style={{backgroundColor:"#d26941", borderColor:"#d26941"}} onClick={() => removeFromCart(item.data.id)}>
                     &times;
                 </Button>

@@ -41,9 +41,10 @@ function Cart() {
                         Total $
                         {cartItems.reduce((total, cartItem) => {
                             const item = storeItems.find(i => i.data.id === cartItem.id)
-                            return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
+                            return total + (item?.data.precio || 0) * cartItem.cantidad
                             }, 0)
                         }
+                        .000
                     </div>
             </Stack>
             </div>
