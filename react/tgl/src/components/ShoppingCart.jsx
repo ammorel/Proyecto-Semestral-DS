@@ -42,7 +42,7 @@ function Cart() {
                         Total {" "}
                         {formatCurrency(cartItems.reduce((total, cartItem) => {
                             const item = storeItems.find(i => i.data.id === cartItem.id)
-                            return total + (item?.data.precio || 0) * cartItem.cantidad
+                            return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
                             }, 0)
                         )}
 
