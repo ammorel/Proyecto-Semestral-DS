@@ -58,11 +58,13 @@
     border-color: #B8C7AB;
     background-color: #B8C7AB;
     font-family: Helvetica;
+    color: #000000;
 }
 
 .btn:hover{
     background-color: #B8C7AB;
     border-color: #B8C7AB;
+    color: #000000
 }
 
 .contacto{
