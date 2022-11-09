@@ -1,6 +1,7 @@
 import React from "react"
 import { Button, Card } from "react-bootstrap"
 import { useCarrito } from "./ShoppingCartContext.tsx"
+import { formatCurrency } from "./formatCurrency.ts" 
 
 type ItemProps = {
     id: number
@@ -19,7 +20,7 @@ ItemProps) {
                 <Card.Body className="d-flex flex-column">
                     <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
                         <span className="fs-2" style={{color:"#FFFFFF"}}>{nombre}</span>
-                        <span className="ms-2 text-muted">${precio}</span>
+                        <span className="ms-2 text-muted">{formatCurrency(precio*1000)}</span>
                     </Card.Title>
                     <div className="mt-auto">
                         {cantidad === 0 ? (

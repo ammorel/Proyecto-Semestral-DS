@@ -2,6 +2,7 @@ import { useCarrito } from "./ShoppingCartContext.tsx";
 import { Stack } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import React, { useEffect, useState } from "react";
+import { formatCurrency } from "./formatCurrency.ts"
 
 type CartItemProps = {
     id: number,
@@ -42,10 +43,12 @@ export function CartAnillos({ id, cantidad}: CartItemProps) {
                         )}
                     </div>
                     <div style={{ fontSize: "1.2rem" , color:"#FFFFFF"}}>
-                        ${item.data.precio}
+                        {formatCurrency(item.data.precio*1000)}
                     </div>
                 </div>
-                <div style={{ fontSize: "1rem", color:"#FFFFFF"}}> ${item.data.precio * cantidad + '.000'}</div>
+                
+                <div style={{ fontSize: "1rem", color:"#FFFFFF"}}> {formatCurrency(item.data.precio * cantidad * 1000)}</div>
+
                 <Button size="sm" style={{backgroundColor:"#d26941", borderColor:"#d26941"}} onClick={() => removeFromCart(item.data.id)}>
                     &times;
                 </Button>
