@@ -7,7 +7,7 @@ import './estilos.css';
 function ColRows() {
   return (
     <Container>
-      <Row md={2} xs={1} lg={3} className="justify-content-md-center" style={{marginLeft:'2rem'}}>
+      <Row md={2} xs={1} lg={3} className="justify-content-md-center" style={{marginLeft:'2.5rem'}}>
         <Col className='contenido'>
           <Card bg="black" style={{width: '18rem', borderColor:'grey'}}>
             <a className='cartas' href="/anillos">
