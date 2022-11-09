@@ -25,19 +25,20 @@
 }
 
 .contenido{
-    margin-top: 3rem;
+    margin-top: 4rem;
     text-align: center;
     font-family: Helvetica;
     color: #FFFFFF;
     margin-bottom: 3rem;
 }
 
-.contenido img{
-    border-radius: 50%;
+.cartas{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
-.contenido h2{
-    margin-top: 1.5rem;
+.cartas:hover{
+    color: #FFFFFF;
 }
 
 .material-symbols-outlined {
@@ -58,11 +59,13 @@
     border-color: #B8C7AB;
     background-color: #B8C7AB;
     font-family: Helvetica;
+    color: #000000;
 }
 
 .btn:hover{
     background-color: #B8C7AB;
     border-color: #B8C7AB;
+    color: #000000
 }
 
 .contacto{

@@ -46,7 +46,9 @@ export function CartAnillos({ id, cantidad}: CartItemProps) {
                         {formatCurrency(item.data.precio*1000)}
                     </div>
                 </div>
+                
                 <div style={{ fontSize: "1rem", color:"#FFFFFF"}}> {formatCurrency(item.data.precio * cantidad * 1000)}</div>
+
                 <Button size="sm" style={{backgroundColor:"#d26941", borderColor:"#d26941"}} onClick={() => removeFromCart(item.data.id)}>
                     &times;
                 </Button>
