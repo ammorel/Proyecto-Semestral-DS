@@ -7,9 +7,9 @@ import './estilos.css';
 function ColRows() {
   return (
     <Container>
-      <Row md={2} xs={1} lg={3} className="justify-content-md-center" style={{marginLeft:'2.5rem'}}>
+      <Row md={2} xs={1} lg={3} className="justify-content-md-center g-5">
         <Col className='contenido'>
-          <Card bg="black" style={{width: '18rem', borderColor:'grey'}}>
+          <Card bg="black" style={{borderColor:'grey'}}>
             <a className='cartas' href="/anillos">
               <Card.Img variant="bottom" src={require("../imgs/lootring1.jpg")}/>
               <Card.Body>
@@ -22,7 +22,7 @@ function ColRows() {
           </Card>
         </Col>
         <Col className='contenido'>
-          <Card bg="black" style={{width: '18rem', borderColor:'grey'}}>
+          <Card bg="black" style={{borderColor:'grey'}}>
             <a className='cartas' href="/pulseras">
               <Card.Img variant="top" src={require("../imgs/wristchain2.jpg")}/>
               <Card.Body>
@@ -35,7 +35,7 @@ function ColRows() {
           </Card>
         </Col>
         <Col className='contenido'>
-          <Card bg="black" style={{width: '18rem', borderColor:'grey'}}>
+          <Card bg="black" style={{borderColor:'grey'}}>
             <a className='cartas' href="/apedido">
               <Card.Img variant="top" src={require("../imgs/collar1.jpg")}/>
               <Card.Body>
