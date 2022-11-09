@@ -9,7 +9,7 @@ import './estilos.css';
 function Nosotros() {
   return (
     <>
-      <Figure>
+      <Figure style={{marginTop:'1.5rem'}}>
         <Figure.Image
           width={3800}
           height={450}
