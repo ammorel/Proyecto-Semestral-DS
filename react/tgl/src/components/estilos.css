@@ -23,6 +23,10 @@
 .carousel-caption{
     font-family: Helvetica;
 }
+.justify-content-md-center{
+    margin-top: 2em;
+    margin-bottom: 5em;
+}
 
 .contenido{
     text-align: center;
