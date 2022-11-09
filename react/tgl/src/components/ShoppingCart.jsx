@@ -4,6 +4,7 @@ import { useCarrito } from "./ShoppingCartContext.tsx";
 import { CartAnillos } from "./CartAnillos.tsx";
 import { CartPulseras } from "./CartPulseras.tsx";
 import React, { useEffect, useState } from "react";
+import { formatCurrency } from "./formatCurrency.ts"
 
 function Cart() {
     const {cartItems} = useCarrito()
@@ -38,12 +39,12 @@ function Cart() {
                 <CartPulseras key = {item.id} {...item} />
                 ))}
                     <div className="ms-auto fw-bold fs-5" style={{color:"#FFFFFF", textAlign:"right"}}>
-                        Total $
-                        {cartItems.reduce((total, cartItem) => {
+                        Total {" "}
+                        {formatCurrency(cartItems.reduce((total, cartItem) => {
                             const item = storeItems.find(i => i.data.id === cartItem.id)
                             return total + (item?.data.precio || 0) * cartItem.cantidad * 1000
                             }, 0)
-                        }
+                        )}
                     </div>
             </Stack>
             </div>
