@@ -18,7 +18,7 @@ export default function Footer() {
       <section className='' style={{fontFamily: 'Helvetica'}}>
         <MDBContainer className='text-center text-md-start mt-5'>
           <MDBRow className='mt-3'>
-            <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
+            <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
               <h6 className='fw-bold mb-4'>
                 The Glass Lab
               </h6>
@@ -26,6 +26,8 @@ export default function Footer() {
                 Tienda de accesorios de vidrio soplado como anillos, pulseras y proyectos especiales.
               </p>
             </MDBCol>
+
+            
 
             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
               <h6 className='fw-bold mb-4'>Menú</h6>
@@ -43,7 +45,7 @@ export default function Footer() {
               </p>
             </MDBCol>
 
-            <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
+            <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
               <h6 className='fw-bold mb-4'>Productos</h6>
               <p>
                 <a href='/anillos' className='text-reset' style={{textDecoration:'none'}}>Anillos
@@ -55,11 +57,27 @@ export default function Footer() {
               </p>
             </MDBCol>
 
-            <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
+            <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-md-0 mb-4'>
               <h6 className='fw-bold mb-4'>Sobre TGL</h6>
               <p>
                 <a href='/nosotros' className='text-reset' style={{textDecoration:'none'}}>Nosotros
                 </a>
+              </p>
+            </MDBCol>
+
+            <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-md-0 mb-4'>
+              <h6 className='fw-bold mb-4'>Contacto</h6>
+              <p>
+                <MDBIcon icon="envelope" className="me-3" />
+                ammorel@tgl.cl
+              </p>
+              <p>
+                <MDBIcon icon="envelope" className="me-3" />
+                tpavez@tgl.cl
+              </p>
+              <p>
+                <MDBIcon icon="phone" className="me-3" />
+                +56 9 71653987
               </p>
             </MDBCol>
           </MDBRow>
